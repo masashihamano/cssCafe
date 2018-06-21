@@ -2,6 +2,8 @@
 <html lang="ja">
   <head>
     <title>CssCafe</title>
+    <meta name="description" content="CSS cafeの公式webサイトです">
+    <meta name="keywords" content="CSS cafe,カフェ,コーヒー">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,9 +11,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<!-- ここからheader -->
   <body id="home">
-    <header id="top">
+
+<%= render 'pages/header' %>
+
+<%= yield %>
+</body>
+</html>
+
+
+
+<!-- ここからheader -->
+
+    <!-- <header id="top">
       <h1>CSS Cafe</h1>
       <nav>
         <ul class="clearfix">
@@ -23,14 +35,15 @@
           <li><a href="#">お問い合わせ</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 <!-- ここまでheader -->
 
 <!-- ここからmain -->
-  <main class="clearfix">
-    <div id="main_image">
-      <img src="images/cafe.jpg" alt="CSS Cafe">
-    </div>
+  <!-- <main class="clearfix"> -->
+    <!-- <div id="main_image"> -->
+      <!-- <img src="cafe.jpg" alt="CSS Cafe">
+      <%#= image_tag 'cafe.jpg', alt: 'CSS Cafe' %>
+    <!- </div>
     <div id="main_content">
       <section id="info">
         <h2>お知らせ</h2>
@@ -51,9 +64,10 @@
           <li>バイオリン演奏付きのスペシャルディナーイベントの早期予約受付中。</li>
         </ul>
       </section>
-    </div>
+    </div> -->
 <!-- ここからsidebar -->
-  <aside id="sidebar">
+<%#= render 'pages/aside' %>
+  <!-- <aside id="sidebar">
     <ul>
       <li>
         <a href="#">
@@ -66,13 +80,14 @@
         </a>
       </li>
     </ul>
-  </aside>
+  </aside> -->
 <!-- ここまでsidebar -->
-</main>
+<!-- </main> -->
 <!-- ここまでmain -->
 
 <!-- ここからfooter -->
-  <footer>
+<%#= render 'pages/footer' %>
+  <!-- <footer>
     <ul>
       <li><a href="index.html"</a>ホーム</li>
       <li><a href="#"</a>商品情報</li>
@@ -83,9 +98,5 @@
     </ul>
 
     <small>&copy; 2018 CSS Cafe</small>
-  </footer>
+  </footer> -->
 <!-- ここまでfooter -->
-
-    <%= yield %>
-  </body>
-</html>

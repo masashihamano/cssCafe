@@ -1,1 +1,32 @@
-<h1>Pages#index</h1>
+<main class="clearfix">
+  <div id="main_image">
+    <!-- <img src="cafe.jpg" alt="CSS Cafe"> -->
+    <%= image_tag 'cafe.jpg', alt: 'CSS Cafe' %>
+  </div>
+  <div id="main_content">
+    <section id="info">
+      <h2>お知らせ</h2>
+      <dl>
+        <dt>2018年3月10日</dt>
+        <dd>リニューアルオープンしました。</dd>
+        <dt>2018年4月15日</dt>
+        <dd>4/27（金）は設備メンテナンスのため休業いたします。</dd>
+        <dt>2018年4月20日</dt>
+        <dd>ゴールデンウィークは休まず営業いたします。</dd>
+      <dl>
+    </section>
+    <section id="campaign">
+      <h2>キャンペーン情報</h2>
+      <ul>
+        <li>日頃の感謝を込めて、パスタ全品がいつもよりお得に！</li>
+        <li>平日11時から14時までお得なランチタイムを実施中。</li>
+        <li>バイオリン演奏付きのスペシャルディナーイベントの早期予約受付中。</li>
+      </ul>
+    </section>
+  </div>
+
+<%= render 'pages/aside' %>
+
+</main>
+
+<%= render 'pages/footer' %>
